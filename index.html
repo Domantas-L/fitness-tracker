@@ -9,22 +9,141 @@
 </head>
 
 <body>
-    <header>
-        <nav class = "nav-bar">
+    <header class="nav-header">
+        <nav class="nav-bar">
             <div class="nav-start">
-                <a href="/" class = "nav-btn">main menu</a>
+                <a href="#" class="nav-btn">main menu</a>
             </div>
             <div>
                 <input type="text" placeholder="Search" class="nav-search-bar">
-                <button class ="nav-create-btn">Create</button>
+                <button class="nav-create-btn">Create</button>
             </div>
             <div>
-                <a href="#"class = "nav-btn" >
-                <span>Inbox</span>
-                <a href="#" class = "nav-btn">Account information</a>
+                <a href="#" class="nav-btn">
+                    <span>Inbox</span>
+                    <a href="#" class="nav-btn">Account information</a>
             </div>
         </nav>
     </header>
+    <main>
+        <section aria-labelledby="Board-area" class="Board">
+            <section class="single-board">
+                <header class="Board-header">
+                    <button type="button" class="Board-name-btn">Today</button>
+                    <input type="text" class="column-name-input" value="Today" aria-label="Column name" hidden>
+                    <span class="Task-counter">1</span>
+                </header>
+                <article>
+                    <ul class="List-items-display">
+                        <li class="list-item">
+                            <label for=" task-check-box">
+                                <input type="checkbox" class ="List-checkbox">
+                            </label>
+                            <div class ="List-task-text" >
+                                <span> Test</span>
+                            </div>
+                            <div class = "List-btn-display">
+                                <button class="List-btn">
+                                    Update
+                                </button>
+                                <button class="List-btn">
+                                    Delete
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+                <footer class="List-footer">
+                    <div>
+                    <button class = "Add-btn">
+                        + Add a card
+                        </div>
+                    </button>
+                </footer>
+            </section>
+           <section class="single-board">
+                <header class="Board-header">
+                    <button type="button" class="Board-name-btn">This week</button>
+                    <input type="text" class="column-name-input" value="Today" aria-label="Column name" hidden>
+                    <span class="Task-counter">1</span>
+                </header>
+                <article>
+                    <ul class="List-items-display">
+                        <li class="list-item">
+                            <label for=" task-check-box">
+                                <input type="checkbox" class ="List-checkbox">
+                            </label>
+                            <div class ="List-task-text" >
+                                <span> Test</span>
+                            </div>
+                            <div class = "List-btn-display">
+                                <button class="List-btn">
+                                    Update
+                                </button>
+                                <button class="List-btn">
+                                    Delete
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+                <footer class="List-footer">
+                    <div>
+                    <button class = "Add-btn">
+                        + Add a card
+                        </div>
+                    </button>
+                </footer>
+            </section>
+            <section class="single-board">
+                <header class="Board-header">
+                    <button type="button" class="Board-name-btn">In the future</button>
+                    <input type="text" class="column-name-input" value="Today" aria-label="Column name" hidden>
+                    <span class="Task-counter">1</span>
+                </header>
+                <article>
+                    <ul class="List-items-display">
+                        <li class="list-item">
+                            <label for=" task-check-box">
+                                <input type="checkbox" class ="List-checkbox">
+                            </label>
+                            <div class ="List-task-text" >
+                                <span> Test</span>
+                            </div>
+                            <div class = "List-btn-display">
+                                <button class="List-btn">
+                                    Update
+                                </button>
+                                <button class="List-btn">
+                                    Delete
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+                <footer class="List-footer">
+                    <div>
+                    <button class = "Add-btn">
+                        + Add a card
+                        </div>
+                    </button>
+                </footer>
+            </section>
+            <section>
+                <Button class = "Add-list-btn">
+                    + Add another list
+                </Button>
+            </section>
+        </section>
+        <section aria-labelledby="calender-area">
+            <p>
+                Place for a calender later
+            </p>
+        </section>
+
+
+    </main>
+
 </body>
 
 </html>
