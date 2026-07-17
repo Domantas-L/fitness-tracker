@@ -15,16 +15,18 @@ let TodayMockData = [
         End: "14:50"
     },
 ];
+const today_list = document.querySelector("#Today-List");
 const form_overlay = document.querySelector("#form-overlay");
 const task_form = document.querySelector("#task_form");
 const form_open_btn = document.querySelector("#open-form-btn");
 const form_close_btn = document.querySelector("#Close-form-btn");
 const Add_new_list = document.querySelector("#Board");
+const item_delete_btn=document.querySelector("#Item_delete_btn");
+
 
 form_open_btn.addEventListener("click",() =>{
     form_overlay.classList.remove("hidden");
 });
-
 
 
 form_close_btn.addEventListener("click",()=>
@@ -70,10 +72,29 @@ function getTodayTask()
     }
     return TodayMockData;
 }
+
+function deleteTodayTask(id)
+{
+    const index = TodayMockData.find(task => task.id ===id);
+    if(index != -1)
+    {
+        TodayMockData.splice(index,1);
+    }
+}
+
+today_list.addEventListener("click",(event)=>
+{
+    const deleteBtn = event.target.closest(".delete-btn");
+    if(!deleteBtn)
+        return;
+    const id = Number(deleteBtn.id);
+    deleteTodayTask(id);
+    RenderTodayTask();
+})
+
 RenderTodayTask();
 
 function RenderTodayTask() {
-    const today_list = document.querySelector("#Today-List");
     if (TodayMockData.length == 0) {
         today_list.innerHTML = "<li><p>Nothing was added yet</p></li>";
         return;
@@ -94,7 +115,7 @@ function RenderTodayTask() {
         </div>
     <div class="List-btn-display">
         <button class="List-btn">Update</button>
-        <button class="List-btn">Delete</button>
+        <button type="button" class="List-btn delete-btn" data-id="${w.id}">Delete</button>
     </div>
     </li>`
     ).join("");
