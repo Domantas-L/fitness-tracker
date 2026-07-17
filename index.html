@@ -27,112 +27,41 @@
     </header>
     <main>
         <section aria-labelledby="Board-area" class="Board">
-            <section class="single-board">
+            <section class="single-board" id ="Board">
                 <header class="Board-header">
                     <button type="button" class="Board-name-btn">Today</button>
-                    <input type="text" class="column-name-input" value="Today" aria-label="Column name" hidden>
+                    <input type="text" class="column-name-input" value="Today" aria-label="Column name" hidden id="Board_name">
                     <span class="Task-counter">1</span>
                 </header>
                 <article>
-                    <ul class="List-items-display">
-                        <li class="list-item">
-                            <label for=" task-check-box">
-                                <input type="checkbox" class ="List-checkbox">
-                            </label>
-                            <div class ="List-task-text" >
-                                <span> Test</span>
+                    <article class="top-List-items-display">
+                        <div class="top-list-item">
+                            <div class="List-task-text">
+                                <span> Name of project</span>
                             </div>
-                            <div class = "List-btn-display">
-                                <button class="List-btn">
-                                    Update
-                                </button>
-                                <button class="List-btn">
-                                    Delete
-                                </button>
+                            <div class="List-task-text">
+                                <span> Start-time</span>
                             </div>
-                        </li>
+                            <div class="List-task-text">
+                                <span> Estamated end time</span>
+                            </div>
+                            <div class="List-btn-display">
+                            </div>
+                        </div>
+                    </article>
+                    <ul class="List-items-display" id="Today-List">
+                        
                     </ul>
                 </article>
                 <footer class="List-footer">
                     <div>
-                    <button class = "Add-btn">
-                        + Add a card
-                        </div>
-                    </button>
+                        <button type="button" class="Add-btn" id="open-form-btn">+ Add a card</button>
+                    </div>
                 </footer>
             </section>
-           <section class="single-board">
-                <header class="Board-header">
-                    <button type="button" class="Board-name-btn">This week</button>
-                    <input type="text" class="column-name-input" value="Today" aria-label="Column name" hidden>
-                    <span class="Task-counter">1</span>
-                </header>
-                <article>
-                    <ul class="List-items-display">
-                        <li class="list-item">
-                            <label for=" task-check-box">
-                                <input type="checkbox" class ="List-checkbox">
-                            </label>
-                            <div class ="List-task-text" >
-                                <span> Test</span>
-                            </div>
-                            <div class = "List-btn-display">
-                                <button class="List-btn">
-                                    Update
-                                </button>
-                                <button class="List-btn">
-                                    Delete
-                                </button>
-                            </div>
-                        </li>
-                    </ul>
-                </article>
-                <footer class="List-footer">
-                    <div>
-                    <button class = "Add-btn">
-                        + Add a card
-                        </div>
-                    </button>
-                </footer>
-            </section>
-            <section class="single-board">
-                <header class="Board-header">
-                    <button type="button" class="Board-name-btn">In the future</button>
-                    <input type="text" class="column-name-input" value="Today" aria-label="Column name" hidden>
-                    <span class="Task-counter">1</span>
-                </header>
-                <article>
-                    <ul class="List-items-display">
-                        <li class="list-item">
-                            <label for=" task-check-box">
-                                <input type="checkbox" class ="List-checkbox">
-                            </label>
-                            <div class ="List-task-text" >
-                                <span> Test</span>
-                            </div>
-                            <div class = "List-btn-display">
-                                <button class="List-btn">
-                                    Update
-                                </button>
-                                <button class="List-btn">
-                                    Delete
-                                </button>
-                            </div>
-                        </li>
-                    </ul>
-                </article>
-                <footer class="List-footer">
-                    <div>
-                    <button class = "Add-btn">
-                        + Add a card
-                        </div>
-                    </button>
-                </footer>
-            </section>
+
             <section>
-                <Button class = "Add-list-btn">
-                    + Add another list
-                </Button>
+                <button class="Add-list-btn">+ Add another list</button>
             </section>
         </section>
         <section aria-labelledby="calender-area">
@@ -141,9 +70,24 @@
             </p>
         </section>
 
-
     </main>
 
+    <section id="form-overlay" class="form-overlay hidden">
+        <form id="task_form" class="floating_form">
+            <h3>Add a new task</h3>
+            <input type="text" id="Task_name" placeholder="Enter task's name" required>
+            <input type="time" id="Task_Start_time" required>
+            <input type="time" id="Task_End_time" required>
+
+            <article class="Form-action">
+                <button type="submit" class="List-btn">Save </button>
+                <button type="button" id="Close-form-btn" class="List-btn">Close</button>
+            </article>
+
+        </form>
+
+    </section>
+    <script src="Script.js"></script>
 </body>
 
 </html>
