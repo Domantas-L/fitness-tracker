@@ -114,6 +114,23 @@ main
     display: flex;
     align-items: center;
 }
+
+.top-list-item
+{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    background-color: #3e3e4f;
+    border-radius: 5px;
+    border: solid var(--text-color) 2px;
+    width: 75%;
+}
+.top-List-items-display
+{
+    padding: 0 5px;
+}
 .list-item
 {
     list-style-type: none;
@@ -161,6 +178,7 @@ main
     width: 100%;
     padding: 2px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
 }
 .List-checkbox:hover
 {
@@ -206,6 +224,43 @@ main
      background-color: rgba(3, 223, 72, 0.916);
      cursor: pointer;
 }
+
+.form-overlay{
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(black, transparent);
+    position: fixed;
+    inset: 0;
+    display: flex;
+}
+.floating_form{
+    gap: 10px;
+    flex-direction: column;
+    display: flex;
+    height: auto;
+    width: 450px;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+}
+.hidden {
+  display: none;
+}
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
 @media(max-width: 840px)
 {
     .nav-search-bar
