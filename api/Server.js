@@ -30,6 +30,20 @@ app.get("/Tasks",(req,res)=>
     res.json({data:tasks})
 });
 
+
+app.post("/Tasks",(req,res) =>
+{
+    const {Done,name,Start,End} =req.body;
+    if(!name|| !Start||!End){
+        return res.status(400).json({
+    error:{ code: "VALIDATION_ERROR", message: "name, start time and end time required"},
+        });
+    }
+    const created = {id : nextID++, name, Start, End};
+    tasks.push(created);
+    res.status(201).json({data:created});
+});
+
 app.listen(PORT, ()=>{
 console.log(`Server running on http://localhost:${PORT}`);
 });
